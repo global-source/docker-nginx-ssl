@@ -9,6 +9,7 @@
 #### Step: 1
 ##### Dependancy for SSL
 ``` $ apt update ```
+
 ``` $ apt install certbot python3-certbot-nginx ```
 
 ##### Create Network
@@ -17,10 +18,12 @@
 #### Step: 2
 ##### Build docker image
 ``` docker build -t my-docker-app . ```
+
 ``` docker build -t my-docker-app2 . ```
 
 ##### Run Docker images with domain name and use the same in nginx.conf
 ``` docker run -d --name domain1.com --network web my-docker-app ```
+
 ``` docker run -d --name domain2.com --network web my-docker-app2 ```
 
 ##### Create LetsEncrypt SSL Certificate
